@@ -11,16 +11,19 @@ def reverse_data(data: list = None):
     # et les retourner en ordre inverse, sans utiliser de liste.
 
     if data is None:
-        pass  # Demander les valeurs ici
+        print("Entrez dix valeurs:")
+        data = [input(f"Valeur {i}/10: " ) for i in range(1,11)]  # Demander les valeurs ici
 
-    reversed_data = None  # Stocker le résultat ici
+    reversed_data = sorted(data, reverse=True) # Stocker le résultat ici
 
     return reversed_data
 
 
 def delete_nth_from_stack(data: Stack, position: int) -> Stack:
     # TODO: Supprimer le énième (position) élément de data et retourner la nouvelle structure de données.
-    return Stack()
+    removed = [data.get() for _ in range(1, len(data) - position)]
+    data.put_many([removed[len(removed) - i] for i in range(2, len(removed))])
+    return data
 
 
 def delete_nth_from_queue(data: Queue, position: int) -> Queue:
@@ -50,7 +53,7 @@ def string_and_structs(string: str) -> tuple:
 
 def main() -> None:
     print("On inverse des données...")
-    print(f"Résultat: {reverse_data()}")
+    # print(f"Résultat: {reverse_data()}")
 
     n = 4
     lifo = Stack()
