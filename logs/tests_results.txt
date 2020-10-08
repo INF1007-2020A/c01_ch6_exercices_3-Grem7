@@ -1,0 +1,70 @@
+test_delete_queue (__main__.TestExercice) ... FAIL
+test_delete_stack (__main__.TestExercice) ... FAIL
+test_reverse (__main__.TestExercice) ... FAIL
+test_sort_queue (__main__.TestExercice) ... FAIL
+test_sort_stack (__main__.TestExercice) ... FAIL
+test_string_and_structs (__main__.TestExercice) ... ERROR
+
+======================================================================
+ERROR: test_string_and_structs (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 91, in test_string_and_structs
+    fifo.put_many("Yeet")
+TypeError: put_many() missing 1 required positional argument: 'items'
+
+======================================================================
+FAIL: test_delete_queue (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 53, in test_delete_queue
+    'Mauvaise reponse'
+AssertionError: [] != [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] : Mauvaise reponse
+
+======================================================================
+FAIL: test_delete_stack (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 38, in test_delete_stack
+    'Mauvaise reponse'
+AssertionError: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] != [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] : Mauvaise reponse
+
+======================================================================
+FAIL: test_reverse (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 23, in test_reverse
+    'Mauvaise reponse'
+AssertionError: Lists differ: ['z', 'patate', 'b', 'a'] != ['patate', 'z', 'b', 'a']
+
+First differing element 0:
+'z'
+'patate'
+
+- ['z', 'patate', 'b', 'a']
+?  -----
+
++ ['patate', 'z', 'b', 'a']
+?            +++++
+ : Mauvaise reponse
+
+======================================================================
+FAIL: test_sort_queue (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 83, in test_sort_queue
+    'Mauvaise reponse'
+AssertionError: [] != [37, 98, 105, 108, 164, 442, 447, 481, 551[51 chars] 954] : Mauvaise reponse
+
+======================================================================
+FAIL: test_sort_stack (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 68, in test_sort_stack
+    'Mauvaise reponse'
+AssertionError: [] != [13, 101, 158, 226, 237, 301, 328, 362, 36[52 chars] 899] : Mauvaise reponse
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.002s
+
+FAILED (failures=5, errors=1)
